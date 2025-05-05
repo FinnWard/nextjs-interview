@@ -7,8 +7,8 @@ export const TodoList = () => {
   useEffect(() => {
     fetch("/api/todos")
       .then((res) => res.json())
-      .then((data) => {
-        setTodoList(data);
+      .then((apiTodos) => {
+        setTodoList(apiTodos);
       });
   }, []);
 
@@ -18,12 +18,11 @@ export const TodoList = () => {
       method: "PUT",
     })
       .then((res) => res.json())
-      .then((data) => {
-        const newData = data;
-
-        setTodoList((prevData) => {
-          return prevData.map((todo: { id: number }) =>
-            todo.id === id ? newData : todo
+      .then((toggledTodo) => {
+        // Update the todo list with the toggled todo
+        setTodoList((currentTodoList) => {
+          return currentTodoList.map((currentTodo: { id: number }) =>
+            currentTodo.id === id ? toggledTodo : currentTodo
           );
         });
       });

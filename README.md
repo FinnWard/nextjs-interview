@@ -37,8 +37,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Issues
 
-- Properly type the return types of our api in `/src/pages/api/todos.ts` and `/src/pages/api/todos/[id].ts` so it does not return a any.
-- Remove all any types in `/src/components/TodoList.ts`
+- Properly type the return types of our api in `/src/pages/api/todos.ts` and `/src/pages/api/todos/[id].ts` so it does not return an `any`.
+- Remove all `any` types in `/src/components/TodoList.ts`
 - update `/src/components/TodoList.ts` to show a error message when the API returns an error
 - Prevent the browser from refreshing when adding a todo in the `/src/components/TodoForm.ts`
   and make sure the todo still gets properly added to the visible todos

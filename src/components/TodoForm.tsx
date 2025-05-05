@@ -15,8 +15,8 @@ export const TodoForm = () => {
       },
     })
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
+      .then((addedTodo) => {
+        console.log(addedTodo);
       });
   };
   return (
