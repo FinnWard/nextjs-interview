@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { todos } from "../todos";
 
-// Flaky Todo handler
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<any> // FIXME: remove the any type and replace it with the correct type
